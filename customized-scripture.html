@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customized Scripture</title>
+    <style>
+    
+        #inputName {
+            outline: 0;
+        }
+    
+    </style>
+</head>
+<body>
+    
+    <label id="name">Name:</label>
+    <input type="text" id="inputName" placeholder="Your name here...">
+    <button type="button" class="btn" id="btnScripture">See Scripture</button>
+    <p id="verses"></p>
+    <script>
+    
+        let btnScripture = document.querySelector('#btnScripture');
+        btnScripture.addEventListener('click', printScripture);
+
+        function printScripture () {
+            let name = document.getElementById('inputName').value;
+            let scripture = `<pre>
+            34 Therefore, they did as <strong>${name}</strong> commanded them, and he went forth and stood 
+            to contend with those who stood by the waters of Sebus; and they were in number not a few.
+
+            35 Therefore they did not fear <strong>${name}</strong>, for they supposed that one of their men could slay 
+            him according to their pleasure, for they knew not that the Lord had promised Mosiah that he 
+            would adeliver his sons out of their hands; neither did they know anything concerning the Lord; 
+            therefore they delighted in the destruction of their brethren; and for this cause they stood 
+            to scatter the flocks of the king.
+
+            36 But a <strong>${name}</strong> stood forth and began to cast stones at them with his sling; yea, with mighty 
+            power he did sling stones amongst them; and thus he slew a bcertain number of them insomuch 
+            that they began to be astonished at his power; nevertheless they were angry because of the 
+            slain of their brethren, and they were determined that he should fall; therefore, seeing that 
+            they ccould not hit him with their stones, they came forth with clubs to slay him.
+
+            37 But behold, every man that lifted his club to smite <strong>${name}</strong>, he smote off their arms with 
+            his sword; for he did withstand their blows by smiting their arms with the edge of his sword, 
+            insomuch that they began to be astonished, and began to flee before him; yea, and they were 
+            not few in number; and he caused them to flee by the strength of his arm.
+            </pre>`;
+
+            let verses = document.querySelector('#verses');
+            verses.innerHTML = scripture;
+        }
+    
+    </script>
+</body>
+</html>

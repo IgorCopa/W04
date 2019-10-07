@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Window</title>
+</head>
+<body>
+    
+    <button type="button" class="btn" id="btn1">Message</button>
+    <script>
+    
+        let btn1 = document.querySelector('#btn1'); // Or document.getElementById('btn1');
+
+        btn1.onclick = (() => {
+            let userName = prompt("What's your name?");
+            let message = `Welcome, ${userName}. Enjoy your journey here.`;
+            alert(message);
+        });
+    
+    </script>
+</body>
+</html>
